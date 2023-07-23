@@ -1,0 +1,579 @@
+@import"https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,700,700i&display=swap";
+@import"https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap";
+*,::before,::after{
+  padding: 0;
+  margin: 0;
+}
+html{
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body{
+  background-color: var(--darkgrey);
+  overflow-x: hidden;
+}
+:root{
+  --green:#44D62C;
+  --grey:#999999;
+  --darkgrey:#222222;
+  --verydarkgrey:#040404;
+}
+/*HEADER*/
+.header{
+  width: 100%;
+  height:6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-bottom: 1px solid var(--green);
+  font-family: 'Roboto', sans-serif;
+  color: var(--grey);
+  position: fixed;
+  gap: 20px;
+}
+.desktop_view{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.desktop_view li{
+  font-size: 1.5rem;
+  list-style: none;
+  cursor: pointer;
+}
+.desktop_view li i{
+  font-size: 1.7rem;
+}
+.header img{
+  cursor: pointer;
+  width: 35px;
+}
+.desktop_view li:hover{
+  color: white;
+}
+.desktop_view li:hover .desktop_view li i{
+  color: white;
+}
+
+.home_search{
+  width: 100%;
+  height: 300%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkgrey);
+  position: absolute;
+  gap: 20px;
+}
+.visibility{
+  visibility: hidden;
+}
+.home_search i{
+  font-size: 1.5rem;
+  color: var(--grey);
+}
+#pointer{
+  cursor: pointer;
+}
+.home_search input{
+  font-size: 1.5rem;
+  color: white;
+  height: 100%;
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: var(--darkgrey);
+}
+.cart{
+  position: relative;
+  z-index: 2;
+  margin: 0 15px;
+}
+.cart i{
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.cart i:hover{
+  color: white;
+}
+.backdrop{
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.home_cart_box{
+  width:  290px;
+  height: 300px;
+  background-color: var(--darkgrey);
+  position: absolute;
+  right: -20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.home_cart_box:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid var(--grey);
+  right: 6%;
+  top: -20px;
+ }
+.home_cart_box:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid var(--darkgrey);
+  right: 6%;
+  top: -18px;
+ }
+ .home_cart_box p{
+  font-size: 1.5rem;
+ }
+.home_cart_box_links{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.home_cart_box_links span{
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--grey);
+}
+.home_cart_box_links p{
+  color: white;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.home_cart_box_links p:hover{
+  color: var(--green);
+}
+.home_cart_box_links i{
+  margin-right: 10px;
+  font-size: 2rem;
+}
+#display_none{
+  display:none;
+}
+.hamburger{
+  display: none;
+  margin: 0 15px;
+}
+.hamburger i{
+  font-size: 3rem;
+}
+/*HOME*/
+.home{
+  width: 100%;
+  min-height: 200vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+#home_main{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: white;
+  gap: 6px;
+  font-family: Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
+}
+#head{
+  margin-top: 50px;
+  font-size: 6em;
+  font-weight: 600;
+}
+#sub{
+  font-size: 3em;
+}
+.home_links{
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.home_1 .home_links,.home_2 .home_links,.home_3 .home_links{
+  width: 200px;
+}
+.home_links p{
+  color: white;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+.home_links p:hover{
+  text-decoration: underline;
+}
+.home_links p i{
+  color: var(--green);
+  margin-left: 5px;
+}
+.home_1{
+  width: 100%;
+  height: 70vh;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/eeabcb1c0f8f11605b7640f781f28134/razer-blade-14-2023-homepage-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 8px;
+  cursor: pointer;
+  margin-top: 6rem;
+}
+.home_2{
+  width: 100%;
+  height: 70vh;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/631eeeb90684b54d5ffefc45e8511ac4/razer-blackwidow-v4-homepage-large.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 8px;
+  cursor: pointer;
+}
+.home_3{
+  width: 100%;
+  height: 70vh;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/41ee1682d065dc87f4ba2424f885eea2/cobra-pro-homepage-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 8px;
+  cursor: pointer;
+}
+.home_4{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  text-align: center;
+}
+.home_4_1{
+  width:49.6%;
+  height: 60vh;
+  margin-right: 6px;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/c5d7d281c387a389b6089421d90c8010/razer-blackwidow-v4-x-b-950x580-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6px;
+  cursor: pointer;
+}
+.home_4_2{
+  width:49.6%;
+  height: 60vh;
+  margin-left: 5px;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/c5d7d281c387a389b6089421d90c8010/back-to-school-campaign-b-950x580-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6px;
+  cursor: pointer;
+}
+.home_4_3{
+  width:49.6%;
+  height: 60vh;
+  margin-right: 6px;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/2fb5601db7a84213129e2f26d31f050f/mercury-blade16-blade18-b-950x580-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6px;
+  cursor: pointer;
+}
+.home_4_4{
+  width:49.6%;
+  height: 60vh;
+  margin-left: 5px;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/e6ac953482915f0bb872b801849f71f6/razer-street-fighter-6-custom-b-950x580-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6px;
+  cursor: pointer;
+}
+.home_4_5{
+  width:49.6%;
+  height: 60vh;
+  margin-right: 6px;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/e6ac953482915f0bb872b801849f71f6/honkai-star-rail-webshop-razer-gold-954x580.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.home_4_6{
+  width:49.6%;
+  height: 60vh;
+  margin-left: 5px;
+  background-image: url(https://assets2.razerzone.com/images/pnx.assets/ab20c0e7b6887e4438c7bb329c59b288/razer-edge-b-950x580-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+/*FOOTER*/
+.footer{
+  background-color: #111111;
+  width: 100%;
+  min-height: 38vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.footer_top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 60%;
+  min-height: 20vh;
+}
+#foot_head{
+  color: white;
+  font-size: 1.2rem;
+}
+#follow_us{
+  color: white;
+  font-size: 1.2rem;
+}
+.footer_top_menu{
+  min-height: 20vh;
+  margin-top: 10px;
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+.footer_top_menu p{
+  color: var(--grey);
+  font-size: 1.2rem;
+}
+#menu_item{
+  cursor: pointer;
+}
+#menu_item:hover{
+  color: white;
+  text-decoration: underline;
+}
+.footer_top_menu i{
+  color: var(--grey);
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.footer_top_menu i:hover{
+  color: white;
+}
+.footer_top_tagline{
+  font-family: 'Roboto', sans-serif;
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 70px;
+  text-align: right;
+}
+.footer span{
+  width: 60%;
+  height: 1px;
+  background-color: var(--grey);
+}
+.footer_bottom{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+}
+.footer_bottom_terms{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--grey);
+  font-size: 1.2rem;
+}
+.footer_bottom_terms_site{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_bottom_terms_site span{
+  width: 2px;
+  height: 20px;
+}
+.footer_bottom_country{
+  width: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_bottom_country span{
+  width: 2px;
+  height: 20px;
+}
+.footer_bottom_country p{
+  font-size: 1.2rem;
+  color: var(--grey);
+}
+.footer_bottom_country i{
+  font-size: 1rem;
+}
+@media(max-width:1372px){
+  .home_4_1,.home_4_2,.home_4_3,.home_4_4,.home_4_5,.home_4_6{
+    width: 49.5%;;
+  }
+}
+@media(max-width:1200px){
+  .header ul{
+    width: 90%;
+  }
+  .home_1,.home_2,.home_3{
+    height: 85vh;
+  }
+  .home_4_1,.home_4_2,.home_4_3,.home_4_4,.home_4_5,.home_4_6{
+    width: 49.4%;
+    height: 65vh;
+    font-size: 6px;
+  }
+  .footer{
+    height: 45vh;
+  }
+  .footer_top{
+    width: 98%;
+  }
+  .footer span{
+    width: 98%;
+  }
+  .footer_bottom{
+    width: 98%;
+  }
+  .footer_bottom_terms_site span,.footer_bottom_country span{
+    width: 2px;
+  }
+  .footer_bottom_country{
+    width: 20%;
+  }
+}
+@media(max-width:914px){
+  .home_4_1,.home_4_2,.home_4_3,.home_4_4,.home_4_5,.home_4_6{
+    width: 49.3%;;
+  }
+}
+@media(max-width:784px){
+  #head{
+    margin-top: 50px;
+    font-size: 4em;
+    font-weight: 600;
+  }
+  #sub{
+    font-size: 2em;
+  }
+  .home_4{
+    flex-direction: column;
+  }
+  .home_4_1,.home_4_2,.home_4_3,.home_4_4,.home_4_5,.home_4_6{
+    width: 100%;;
+  }
+  .header{
+    justify-content: space-between;
+    position: static;
+  }
+  .hamburger{
+    display: flex;
+    z-index:11;
+  }
+  .desktop_view{
+    display: none;
+  }
+  .mobile_view{
+    position: absolute;
+    display: flex;
+    background-color: black;
+    z-index: 11;
+    height: 50vh;
+    width: 95vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 140px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mobile_view li{
+    height: 100%;
+    margin: 10px;
+    font-size: 2rem;
+    position: relative;
+  }
+  .mobile_view li::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 85vw;
+    left: 0;
+    bottom: 0;
+    background-color: var(--grey);
+  }
+  .home_search{
+    visibility: visible;
+    height: 10%;
+    top: -60px;
+    border-radius: 10px;
+  }
+  .dark_backdrop{
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    background-color: var(--verydarkgrey);
+    z-index: 10;
+  }
+  .header img{
+    z-index: 11;
+  }
+  #pointer{
+    display: none;
+  }
+  .home_1{
+    margin-top: 0;
+  }
+}
